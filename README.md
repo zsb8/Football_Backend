@@ -42,7 +42,7 @@ You can run ```python -m pytest tests\test_step2_summarize.py```.
 ![image](https://github.com/user-attachments/assets/41633cfd-0362-4448-8e70-756d6a82d899)
 
 # ★ Root folder, Serverless+AWS
-Run command ```serverless deploy```` on Podman env. Notice, not docker env, please use Podman env.    
+Run command ```serverless deploy``` on Podman env. Notice, not docker env, please use Podman env.    
 ## Auto Deploy as MicroServices on AWS
 We can deploy these programs as microservices on AWS. I created 3 APIs on AWS using Lambda and docker ECR.   
 * If you want to refresh data from football-data.org, we can call the API namned ```https://y4zeduzvn3.execute-api.us-east-1.amazonaws.com/get_csv``` with Postman. This API can be invoked to retrieve and refresh the incremental data.   
