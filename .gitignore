@@ -1,0 +1,13 @@
+node_modules/
+__pycache__/
+metastore_db/
+*.log
+.vscode/
+*.code-workspace
+.idea
+.mypy*/
+.ipynb_checkpoints/
+divecatintel/package_info.txt
+notebooks/people.parquet/
+**/.ipynb_checkpoints
+
