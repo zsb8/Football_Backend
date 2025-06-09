@@ -1,4 +1,8 @@
 
+Cooperate with Front-end, NextJS.
+![image](https://github.com/user-attachments/assets/255c12fc-b62a-43de-973a-f4d45580708f)
+
+
 # How to run these programs
 ## Get data from API then save it as CSV
 Run ```python step1_getcsv.py```  
