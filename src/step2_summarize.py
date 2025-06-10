@@ -57,11 +57,14 @@ def read_csv_data(file_path):
         pandas.DataFrame: The loaded data or None if there was an error
     """
     try:
-        if not os.path.exists(file_path):
-            print(f"Error: File '{file_path}' does not exist.")
-            return None
-            
-        df = pd.read_csv(file_path)
+        s3_client = boto3.client('s3')
+        bucket_name = 'zsbtest'
+        object_key = 'football/data/premier_league_stats.csv'
+
+        response = s3_client.get_object(Bucket=bucket_name, Key=object_key)
+        file_content = response['Body'].read()
+
+        df = pd.read_csv(io.StringIO(file_content.decode('utf-8')))
         if df.empty:
             print(f"Error: File '{file_path}' is empty.")
             return None
